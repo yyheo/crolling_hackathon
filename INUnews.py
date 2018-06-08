@@ -47,7 +47,7 @@ def saveNews(list) :
     count = 0
     try :
         for i in range(len(list)) :
-            with open('C:\\Users\\Honeyoon\\PycharmProjects\\crolling_hackathon\\textfile\\text{0}.txt'.format(count), 'w', encoding='utf-8') as f :
+            with open('C:\\Users\\Honeyoon\\PycharmProjects\\crollinghackathon\\textfile\\text{0}.txt'.format(count), 'w', encoding='utf-8') as f :
                 f.write(list[i])
             count+=1
         return True
@@ -68,7 +68,7 @@ for i in range(0, 7):
 
     tagger = Komoran()
     stopword = set([('있', 'VV'), ('하', 'VV'), ('되', 'VV'), ('【서울=뉴시스】', 'VV'), ('이에 따라', 'VV'), ('그러나', 'VV')])
-    tr.loadSents(RawSentenceReader("C:\\Users\\Honeyoon\\PycharmProjects\\crolling_hackathon\\textfile\\text{0}.txt".format(i)),
+    tr.loadSents(RawSentenceReader("C:\\Users\\Honeyoon\\PycharmProjects\\crollinghackathon\\textfile\\text{0}.txt".format(i)),
                  lambda sent: filter(lambda x: x not in stopword and x[1] in ('NNG', 'NNP', 'VV', 'VA'),
                                      tagger.pos(sent)))
     # print('Build...')

@@ -37,6 +37,8 @@ def mostView() :
     soup = _parser()
     hidden = soup.find("div", {"id": "contents"})
     lists = hidden.find_all("tr")
+    mostlink = ""
+    title = ""
     for item in lists :
         category = item.find("span", {"class" : "tb_stress"})
         if category != None :
